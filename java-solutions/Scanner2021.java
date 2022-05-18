@@ -20,7 +20,9 @@ public class Scanner2021 implements Closeable  {
     }
 
     public boolean isPartOfWord(char c) {
-        return Character.isLetter(c) || Character.getType(c) == Character.DASH_PUNCTUATION || c == '\'';
+        return Character.isLetter(c) ||
+            Character.getType(c) == Character.DASH_PUNCTUATION || 
+            c == '\'';
     }
 
     public String nextLine() throws IOException {
@@ -32,5 +34,4 @@ public class Scanner2021 implements Closeable  {
     public void close() throws IOException {
         in.close();
     }
-
 }
