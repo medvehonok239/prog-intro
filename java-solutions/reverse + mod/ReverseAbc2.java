@@ -1,11 +1,15 @@
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Map;
 
-public class ReverseAbc2 {
+/**
+ * @author : medvezhonokok
+ * @mailto : nocap239@gmail.com
+ * @created : 07.10.2021
+ **/
 
+public class ReverseAbc2 {
     public static void main(String[] args) throws IOException {
         Map<Character, Integer> map = Map.of(
                 'a', 0,
@@ -19,9 +23,10 @@ public class ReverseAbc2 {
                 'i', 8,
                 'j', 9
         );
+        
         Scanner2021 in = new Scanner2021(System.in);
+        
         ArrayList<Integer> ints = new ArrayList<>();
-
         ArrayList<String> lines = new ArrayList<>();
 
         while (in.hasNextLine()) {
@@ -56,7 +61,9 @@ public class ReverseAbc2 {
             lines.add(String.valueOf(line));
             ints.clear();
         }
+        
         in.close();
+        
         for (int i = lines.size() - 1; i >= 0; i--) {
             System.out.println(lines.get(i));
         }
