@@ -41,10 +41,8 @@ public abstract class BinaryOperation implements Name {
 
     @Override
     public String toString() {
-
         StringBuilder sb = new StringBuilder();
         sb.append("(").append(first).append(" ").append(sign).append(" ").append(second).append(")");
         return sb.toString();
     }
-
 }
