@@ -5,7 +5,6 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Main {
-
     private static int getNum() {
         Scanner in = new Scanner(System.in);
         String str;
@@ -23,29 +22,22 @@ public class Main {
             } catch (NoSuchElementException e1){
                 System.out.println("Congratulations! Вы ввели что-то не понятное, поэтому вы проиграли!");
                 System.exit(0);
-                //break;
-
             }
-
         }
 
         return n;
     }
 
     public static void main(String[] args) {
-
         Scanner in = new Scanner(System.in);
 
         System.out.println("Chose your 1st player : Human, Sequential, Random");
-
         Player player1 = getPlayer(in.nextLine(), in);
 
         System.out.println("Chose your 2nd player : Human, Sequential, Random");
-
         Player player2 = getPlayer(in.nextLine(), in);
 
         System.out.println("Enter your height :");
-
         int n = getNum();
 
         System.out.println("Enter your length");
@@ -60,8 +52,6 @@ public class Main {
         final int result = new TwoPlayerGame(
                 new BillBoard(n, m, k),
                 player1, player2
-                /*new HumanPlayer(new Scanner(System.in)),
-                new HumanPlayer(new Scanner(System.in))*/
         ).play1(false, x);
         switch (result) {
             case 1:
@@ -99,7 +89,6 @@ public class Main {
         }
         return player;
     }
-
 }
 
 
