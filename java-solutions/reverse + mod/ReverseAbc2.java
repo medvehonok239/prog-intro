@@ -21,7 +21,7 @@ public class ReverseAbc2 {
                 'g', 6,
                 'h', 7,
                 'i', 8,
-                'j', 9
+                'j', 9 
         );
         
         Scanner2021 in = new Scanner2021(System.in);
