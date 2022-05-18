@@ -22,14 +22,9 @@ public class Test {
         StringBuilder str = new StringBuilder();
 
         paragraph.toMarkdown(str);
-
         System.out.println(str);
-
+        
         paragraph.toBBCode(str);
-
         System.out.println(str);
-        //System.out.println(str);
-
-
     }
 }
