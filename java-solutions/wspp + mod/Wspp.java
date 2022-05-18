@@ -1,7 +1,12 @@
 import java.io.*;
 import java.util.*;
-
 import static java.nio.charset.StandardCharsets.UTF_8;
+
+/**
+ * @author : medvezhonokok
+ * @mailto : nocap239@gmail.com
+ * @created : 15.10.2021
+ **/
 
 public class Wspp{
     public static void main(String[] args) throws IOException {
