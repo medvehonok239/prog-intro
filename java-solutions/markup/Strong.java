@@ -3,7 +3,6 @@ package markup;
 import java.util.List;
 
 public class Strong extends Symbol implements Type {
-
     public Strong(List<Type> list1){
         super(list1);
     }
