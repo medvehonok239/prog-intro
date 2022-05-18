@@ -15,7 +15,7 @@ public class Reverse {
         ArrayList<String> lines = new ArrayList<>();
 
         while (in.hasNextLine()) {
-            String str = in.nextLine();
+            String str = in.nextLine(); 
             str += " ";
             StringBuilder num = new StringBuilder("");
             StringBuilder line = new StringBuilder("");
