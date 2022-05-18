@@ -16,7 +16,6 @@ public class RandomPlayer implements Player{
             if (position.isValid(move)) {
                 return move;
             }
-
         }
     }
 }
