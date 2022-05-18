@@ -14,7 +14,6 @@ public class Scanner2021 implements Closeable  {
         this.nextLine = this.in.readLine();
     }
 
-
     public boolean hasNextLine() {
         return nextLine != null;
     }
