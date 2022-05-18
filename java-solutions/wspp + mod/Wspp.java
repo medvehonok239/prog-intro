@@ -4,7 +4,6 @@ import java.util.*;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class Wspp{
-
     public static void main(String[] args) throws IOException {
         Map<String, List<Integer>> wordsCount = new LinkedHashMap<>();
 
@@ -22,13 +21,11 @@ public class Wspp{
                     word.append(str.charAt(i));
                 } else {
                     if (word.length() != 0) {
-
                         if (wordsCount.containsKey(String.valueOf(word))){
                             List<Integer> k = wordsCount.get(String.valueOf(word));
                             k.set(0, k.get(0) + 1);
                             k.add(countWords);
                             wordsCount.put(String.valueOf(word), k);
-
                         } else {
                             List<Integer> a = new ArrayList<>();
                             a.add(1);
