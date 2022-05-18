@@ -10,7 +10,6 @@ import java.io.*;
 
 public class WordStatInput {
     public static void main(String[] args) throws IOException {
-
         ArrayList<String> words = new ArrayList<>();
 
         Scanner2021 in = new Scanner2021(args[0],"utf8");
