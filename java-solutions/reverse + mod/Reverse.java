@@ -1,7 +1,11 @@
-
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * @author : medvezhonokok
+ * @mailto : nocap239@gmail.com
+ * @created : 07.10.2021
+ **/
 
 public class Reverse {
     public static void main(String[] args) throws IOException {
@@ -31,11 +35,11 @@ public class Reverse {
             lines.add(String.valueOf(line));
             ints.clear();
         }
+        
         in.close();
 
         for (int i = lines.size() - 1; i >= 0; i--) {
             System.out.println(lines.get(i));
         }
-
     }
 }
