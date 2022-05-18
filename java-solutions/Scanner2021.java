@@ -1,5 +1,7 @@
 import java.io.*;
 
+// its working, but it won't gonna accepted 
+
 public class Scanner2021 implements Closeable  {
     final private BufferedReader in;
     private String nextLine;
@@ -11,7 +13,7 @@ public class Scanner2021 implements Closeable  {
 
     public Scanner2021(InputStream in) throws IOException {
         this.in = new BufferedReader(new InputStreamReader(in));
-        this.nextLine = this.in.readLine();
+        this.nextLine = this.in.readLine(); 
     }
 
     public boolean hasNextLine() {
