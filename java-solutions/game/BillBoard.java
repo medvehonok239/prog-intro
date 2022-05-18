@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * @author : medvezhonokok
  * @mailto : nocap239@gmail.com
- * @created : 10.12.2021, воксресенье
+ * @created : 10.12.2021, воксресенье 
  **/
 
 public class BillBoard implements Board, Position {
