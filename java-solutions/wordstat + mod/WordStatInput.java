@@ -51,6 +51,6 @@ public class WordStatInput {
         }
 
         writer.close();
-        in.close();
+        in.close(); 
     }
 }
