@@ -1,12 +1,11 @@
-import java.io.*;
-import java.util.*;
-
 /**
  * @author : medvezhonokok
  * @mailto : nocap239@gmail.com
  * @created : 15.10.2021
  **/
 
+import java.io.*;
+import java.util.*;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class WsppPosition {
