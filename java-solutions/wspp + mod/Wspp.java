@@ -39,7 +39,7 @@ public class Wspp{
                         }
                         countWords++;
                     }
-                    word = new StringBuilder();
+                    word = new StringBuilder(); 
                 }
             }
         }
