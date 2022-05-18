@@ -4,6 +4,12 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
+/**
+ * @author : medvezhonokok
+ * @mailto : nocap239@gmail.com
+ * @created : 21.12.2021
+ **/
+
 public class Md2Html {
     public static String replaceHTMLSymb(String str) {
         StringBuilder sb = new StringBuilder();
@@ -20,7 +26,6 @@ public class Md2Html {
             }
         }
 
-
         return sb.toString();
     }
 
@@ -32,7 +37,6 @@ public class Md2Html {
             String testUnary = Character.toString(line.charAt(i));
             String testBin = Character.toString(line.charAt(i)) + line.charAt(i + 1);
             if (map.containsKey(testBin)) {
-
                 if (i > 0 && line.charAt(i - 1) == '\\') {
                     i++;
                     ans.append(testBin);
@@ -40,6 +44,7 @@ public class Md2Html {
                 }
 
                 boolean hasPair = false;
+                
                 for (int j = i + 1; j < line.length() - 2; j++) {
                     if (("" + line.charAt(j) + line.charAt(j + 1)).equals(testBin)) {
                         if (line.charAt(j - 1) == '\\') {
@@ -53,12 +58,8 @@ public class Md2Html {
                         hasPair = true;
                         break;
                     }
-
                 }
-                if (!hasPair) {
-                    ans.append(testUnary);
-                }
-
+                if (!hasPair) ans.append(testUnary);
             } else if (map.containsKey(testUnary)) {
                 if (i > 0 && line.charAt(i - 1) == '\\') {
                     ans.append(testUnary);
@@ -72,10 +73,12 @@ public class Md2Html {
                             j ++;
                             continue;
                         }
+                        
                         String temp = map.get(testUnary);
                         ans.append(temp);
                         ans.append(parseInterval(line.substring(i + 1, j)));
                         ans.append(temp.charAt(0)).append("/").append(temp.substring(1));
+                        
                         i = j;
                         hasPair = true;
                         break;
@@ -90,6 +93,7 @@ public class Md2Html {
                 }
             }
         }
+        
         return ans.toString();
     }
 
@@ -109,6 +113,7 @@ public class Md2Html {
                 result.append(str.charAt(i));
 
             }
+            
             return result.toString();
         }
     }
@@ -168,8 +173,8 @@ public class Md2Html {
                 mySb = new StringBuilder();
                 line = in.readLine();
             }
-
         }
+        
         String r = parseInterval(mySb.toString());
         ans.append(r);
         System.out.println(r);
@@ -181,14 +186,13 @@ public class Md2Html {
             ans = new StringBuilder();
             bigSb = new StringBuilder();
         } else if (bigSb.length() != 0) {
-            //System.err.println(tst);
             out.write("<p>" + ans + "</p>");
             out.newLine();
             ans = new StringBuilder();
             bigSb = new StringBuilder();
         }
+        
         out.close();
         in.close();
-
     }
 }
