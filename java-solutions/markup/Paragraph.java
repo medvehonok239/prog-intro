@@ -3,7 +3,6 @@ package markup;
 import java.util.List;
 
 public class Paragraph extends Symbol implements Type {
-
     public Paragraph(List<Type> list1){
         super(list1);
     }
