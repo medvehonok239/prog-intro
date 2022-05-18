@@ -1,6 +1,12 @@
 import java.io.*;
 import java.util.*;
 
+/**
+ * @author : medvezhonokok
+ * @mailto : nocap239@gmail.com
+ * @created : 15.10.2021
+ **/
+
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class WsppPosition {
@@ -10,22 +16,25 @@ public class WsppPosition {
 
         Scanner2021 in = new Scanner2021(args[0], "utf8");
         BufferedWriter writer = new BufferedWriter(new FileWriter(args[1], UTF_8));
+        
         int countLines = 0;
+        
         while (in.hasNextLine()) {
             int countWords = 1;
             countLines++;
+            
             String str = in.nextLine().toLowerCase(Locale.ROOT);
             str += " ";
+            
             StringBuilder word = new StringBuilder();
+            
             for (int i = 0; i < str.length(); i++) {
                 char c = str.charAt(i);
                 if (Character.isLetter(c) || Character.getType(c) == Character.DASH_PUNCTUATION || c == '\'') {
                     word.append(str.charAt(i));
                 } else {
                     if (word.length() != 0) {
-                        //1 case : if map.contains (word)
-
-                        if (words.containsKey(String.valueOf(word))){
+                        if (words.containsKey(String.valueOf(word))){   //1 case : if map.contains (word)
                             int k = wordsCount.get(String.valueOf(word));
                             k++;
                             wordsCount.put(String.valueOf(word), k);
@@ -45,11 +54,12 @@ public class WsppPosition {
         }
 
         for (Map.Entry<String, StringBuilder> stringStringBuilderEntry : words.entrySet()) {
-            writer.write(stringStringBuilderEntry.getKey() + " " + wordsCount.get(stringStringBuilderEntry.getKey()) + " " + stringStringBuilderEntry.getValue() + '\n');
+            writer.write(stringStringBuilderEntry.getKey() + " " 
+                         + wordsCount.get(stringStringBuilderEntry.getKey()) + " " 
+                         + stringStringBuilderEntry.getValue() + '\n');
         }
 
         writer.close();
         in.close();
-
     }
 }
