@@ -3,7 +3,6 @@ package markup;
 import java.util.List;
 
 public abstract class Symbol implements Type {
-
     List<Type> list;
     public Symbol(List<Type> list1){
         list = list1;
