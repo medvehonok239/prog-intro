@@ -3,6 +3,12 @@ package game;
 import java.util.Arrays;
 import java.util.Map;
 
+/**
+ * @author : medvezhonokok
+ * @mailto : nocap239@gmail.com
+ * @created : 10.12.2021, воксресенье
+ **/
+
 public class BillBoard implements Board, Position {
     private static final Map<Cell, String> CELL_TO_STRING = Map.of(
             Cell.E, ".",
@@ -58,6 +64,7 @@ public class BillBoard implements Board, Position {
         }
 
         turn = turn == Cell.X ? Cell.O : Cell.X;
+        
         return GameResult.UNKNOWN;
     }
 
@@ -70,6 +77,7 @@ public class BillBoard implements Board, Position {
                 }
             }
         }
+        
         return count == 0;
     }
 
@@ -82,7 +90,6 @@ public class BillBoard implements Board, Position {
     }
 
     private boolean checkDig(Move move) {
-
         int count = 0;
 
         int x = move.getRow();
@@ -90,6 +97,7 @@ public class BillBoard implements Board, Position {
 
         int i = x;
         int j = y;
+        
         while ((i < n) && (j < m)) {
             if (field[i++][j++] == turn) {
                 count++;
@@ -102,6 +110,7 @@ public class BillBoard implements Board, Position {
 
         i = x;
         j = y;
+        
         while (i > 0 && j > 0) {
             if (field[--i][--j] == turn) {
                 count++;
@@ -129,6 +138,7 @@ public class BillBoard implements Board, Position {
                 return true;
             }
         }
+        
         i = x;
         j = y;
 
@@ -154,6 +164,7 @@ public class BillBoard implements Board, Position {
                 return true;
             }
         }
+        
         return false;
     }
 
@@ -167,6 +178,7 @@ public class BillBoard implements Board, Position {
                 return true;
             }
         }
+        
         return false;
     }
 
@@ -176,6 +188,7 @@ public class BillBoard implements Board, Position {
         for (int i = 1; i <= m; i++) {
             sb.append(i);
         }
+        
         sb.append(System.lineSeparator());
 
         for (int r = 0; r < n; r++) {
@@ -208,6 +221,4 @@ public class BillBoard implements Board, Position {
         }
         this.turn = turn == Cell.X ? Cell.O : Cell.X;
     }
-
-
 }
