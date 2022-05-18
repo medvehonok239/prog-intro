@@ -67,6 +67,5 @@ public class ReverseAbc2 {
         for (int i = lines.size() - 1; i >= 0; i--) {
             System.out.println(lines.get(i));
         }
-
     }
 }
